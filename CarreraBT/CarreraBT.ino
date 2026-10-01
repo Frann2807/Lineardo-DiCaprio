@@ -49,7 +49,7 @@
 #define pinMderB 20
 
 // --- Botón (GPIO 4) ---
-#define pinBoton 4
+#define pinBoton 5
 
 // --- MPU6050 (I2C) ---
 #define PIN_SDA 8
@@ -341,7 +341,7 @@ void setup() {
   }
 
   // --- 2. Inicializar BLE ---
-  NimBLEDevice::init("MecabotLine_2");
+  NimBLEDevice::init("Lineardo_DiCaprio");
   pServer = NimBLEDevice::createServer();
   pServer->setCallbacks(new MyServerCallbacks());
   NimBLEService* pNusService = pServer->createService(NUS_SERVICE_UUID);
@@ -354,7 +354,7 @@ void setup() {
 
   pNusService->start();
   NimBLEAdvertising* pAdvertising = NimBLEDevice::getAdvertising();
-  pAdvertising->setName("MecabotLine_2");
+  pAdvertising->setName("Lineardo_DiCaprio");
   pAdvertising->addServiceUUID(pNusService->getUUID());
   pAdvertising->start();
   Serial.println("Esperando conexion BLE...");

@@ -6,7 +6,7 @@
 // los while o usar INPUT_PULLDOWN si el botón va a VCC.
 // ============================================================
 
-#define pinSwitch 4
+#define pinSwitch 5
 
 // ===== PINES DE MOTORES (se dejan en 0 en este debug) =====
 #define pinMizqA 9
